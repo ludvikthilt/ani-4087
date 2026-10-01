@@ -14,7 +14,7 @@ Nous bougeons la souris jusqu'à ce qu'elle atteigne le bord. Nous rendons les d
 2. Activer le masquage et le confinement du curseur .
 3. À chaque image, afficher `x`, `y` et `rawDelta` (format CSV : `t_ms,x,y,rawDeltaX,rawDeltaY`) dans un fichier.
 4. Déplacer la souris dans une seule direction jusqu'à dépasser largement le bord, puis continuer 5 secondes.
-5. Repérer dans le CSV l'image où `x` (ou `y`) cesse de varier, et compter combien d'images `rawDelta` continue d'être non nul après.
+5. Repérer l'image où `x` (ou `y`) cesse de varier, et compter combien d'images `rawDelta` continue d'être non nul après.
 6. Expliquer pourquoi le mouvement brut est la bonne source pour une caméra 3D (pas de limite d'écran).
 
 ## 0. Environnement de mesure (à remplir une seule fois par session)
