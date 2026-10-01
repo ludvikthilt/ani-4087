@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# la_fenetre_nue - Jenga Project (inclus dans le workspace via include())
+
+from Jenga import *
+
+with project("la_fenetre_nue"):
+    windowedapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["src/**.cpp", "include/**.hpp"])
+    usemykit()
+
