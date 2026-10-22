@@ -1,0 +1,11 @@
+Captures de la scene R3D/OpenGL de Salle, 640x720 pixels, prises successivement sur une scene statique. Comparaison RGBA pixel par pixel; seuil: ecart maximal par pixel > 1. La carte amplifie chaque ecart RGB par 4 et laisse son alpha opaque.
+
+Deux vues avec offsets IPD gauche/droite:
+pixels > 1: 86817 / 460800
+ecart maximal d'un canal: 91
+
+Deux yeux avec offsets oublies (meme camera au centre):
+pixels > 1: 0 / 460800
+ecart maximal d'un canal: 0
+
+Les captures sont prises sur des frames distinctes, pas simultanement depuis deux buffers de la meme frame. La scene etant immobile, elles illustrent l'effet de l'offset mais ne remplacent pas une capture stereo synchronisee.

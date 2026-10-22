@@ -1,0 +1,7 @@
+Lecture du module: le dernier delta de 0.05 pixel est relu a chaque image, ce qui ajoute 0.005 deg par image a 0.1 deg/pixel.
+
+Accumule et vide: les 120 evenements de mouvement sont appliques une fois, pour un total de 0.600 deg. Une fois le cumul vide, la valeur reste stable apres l'arret.
+
+Accumule sans vidage: le cumul atteint 6 pixels pendant le mouvement et est re-applique a chaque image; apres cinq images supplementaires, le lacet passe de 36.3 a 39.3 deg.
+
+Role du vidage: il efface le stock deja consomme, afin qu'un ancien evenement ne contribue pas une seconde fois aux images suivantes. Valeurs issues du scenario synthetique consigne dans trois.txt.

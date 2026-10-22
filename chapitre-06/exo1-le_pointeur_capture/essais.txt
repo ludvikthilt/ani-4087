@@ -1,0 +1,14 @@
+Avec CaptureMouse seul :
+La capture dirige les evenements souris vers la fenetre; elle ne confine pas le curseur. L'API permet au pointeur de sortir de la zone cliente.
+
+Ce qui le retient :
+ClipMouseToClient(true) applique le confinement au rectangle client. CaptureMouse et ClipMouseToClient ont des roles distincts. Le clip est active au demarrage.
+
+Deux appuis de suite :
+Le premier appui sur Espace libere la capture et le clip puis reaffiche le pointeur. Le second retablit la capture/le clip et le masque. L'etat revient a l'etat initial.
+
+Fermeture sans relacher :
+Le chemin de fermeture appelle ClipMouseToClient(false), CaptureMouse(false) et ShowMouse(true) avant la fin du programme.
+
+Statut :
+Comportement deduit des appels utilises et du contrat de NkWindow; aucune observation manuelle du curseur n'a ete faite dans cette session.

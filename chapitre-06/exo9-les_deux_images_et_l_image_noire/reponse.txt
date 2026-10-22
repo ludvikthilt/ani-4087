@@ -1,0 +1,7 @@
+La comparaison des captures compte 86 817 pixels sur 460 800 avec un ecart de canal superieur a 1; l'ecart maximal est 91. Les contours, l'encadrement de la fenetre et les bords de la porte contribuent visiblement aux ecarts.
+
+L'ecart stereo vient de la separation des centres de projection (IPD); son amplitude depend de la profondeur et de la geometrie des objets.
+
+Une carte noire signifie uniquement que les pixels compares sont identiques selon le seuil et le calcul employes. Elle ne prouve pas la validite des deux rendus: deux buffers noirs ou non mis a jour produiraient aussi une difference noire.
+
+Lorsque le decalage IPD est oublie pour les deux vues, les deux cameras utilisent le meme centre et la carte est noire: 0 pixel sur 460 800 depasse le seuil, ecart maximal 0. Il s'agit de deux captures successives de la scene statique, pas d'une lecture simultanee de deux buffers GPU.

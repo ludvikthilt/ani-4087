@@ -1,0 +1,5 @@
+En pose neutre, les deux axes sont colineaires. Comme Right() vaut -X au repos, les etiquettes gauche/droite du calcul local sont inversees par rapport a l'axe monde +X, mais les memes deux positions sont obtenues.
+
+En roulis 30 deg, l'axe de la tete a une composante verticale; en lacet 90 deg il pointe selon Z. L'axe monde reste fixe sur X. Les ecarts calcules pour l'oeil gauche sont respectivement 60.85 mm et 44.55 mm.
+
+Un ecart interpupillaire place dans un repere monde fixe ne suit pas les yeux quand la tete tourne ou s'incline. La position relative des yeux et donc la geometrie stereo changent; le confort reel doit etre observe dans un casque.

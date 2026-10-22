@@ -1,0 +1,10 @@
+Scenario synthétique a 120 images/s, sensibilite 0.1 deg/pixel.
+Mouvement: 120 evenements de 0.05 pixel/image (total 6.0 pixels), puis aucun nouvel evenement; dernier delta relu = 0.05.
+
+t = 1.0083 s, lu = 0.605 deg, vide = 0.600 deg, sans vidage = 36.900 deg
+t = 1.0167 s, lu = 0.610 deg, vide = 0.600 deg, sans vidage = 37.500 deg
+t = 1.0250 s, lu = 0.615 deg, vide = 0.600 deg, sans vidage = 38.100 deg
+t = 1.0333 s, lu = 0.620 deg, vide = 0.600 deg, sans vidage = 38.700 deg
+t = 1.0417 s, lu = 0.625 deg, vide = 0.600 deg, sans vidage = 39.300 deg
+
+Les cinq lignes sont calculees depuis le scenario de test; elles ne sont pas issues d'evenements d'une souris physique.

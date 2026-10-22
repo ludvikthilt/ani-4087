@@ -1,0 +1,11 @@
+MASALLE_TEST=1
+neutre attendu (0.0, 0.0, -1.0) obtenu (-0.0, 0.0, -1.0) OK
+yaw 90 attendu (-1.0, 0.0, 0.0) obtenu (-1.0, 0.0, -0.0) OK
+pitch 30 attendu (0.0, 0.5, -0.9) obtenu (-0.0, 0.5, -0.9) OK
+Code de sortie : 0
+
+MASALLE_TEST absent
+Sortie : Definir MASALLE_TEST=1 pour lancer les tests avant toute fenetre.
+Code de sortie : 0
+
+Le test yaw 90 est discriminant: inverser le signe de sin(yaw) fait echouer la comparaison.

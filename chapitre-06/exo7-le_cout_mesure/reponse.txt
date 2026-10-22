@@ -1,0 +1,5 @@
+Rapport des medianes sur un million d'iterations: Debug matrices 184.151 ms et quaternions 89.198 ms; Release matrices 73.910 ms et quaternions 73.217 ms. En Release, les medianes sont presque egales.
+
+Cout median par iteration: Debug matrices 184.2 ns, Debug quaternions 89.2 ns, Release matrices 73.9 ns, Release quaternions 73.2 ns. A 90 Hz, le budget est environ 11.11 ms par image; les mesures ne couvrent qu'une operation et non le frame complet.
+
+Conclusion: la variabilite est importante et les valeurs proviennent d'un banc autonome en double precision. Elles ne suffisent pas a conclure sur les primitives Nkentseu ni sur tout materiel; le benchmark doit etre repete sur les operations moteur.

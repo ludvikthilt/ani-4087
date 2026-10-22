@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo9-les_deux_images_et_l_image_noire"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["deux-yeux.cpp"])
+    user3d(modules=["NKRenderer"])

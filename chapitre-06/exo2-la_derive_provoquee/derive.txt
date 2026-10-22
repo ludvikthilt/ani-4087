@@ -1,0 +1,8 @@
+Scenario analytique reproductible, non mesure souris: sensibilite=0.1 deg/pixel, delta residuel=2 pixels/image, frequence=120 images/s.
+t = 3.0 s, images = 360, brut = 2, lacet = 72.0 deg.
+t = 4.0 s, images = 480, brut = 2, lacet = 96.0 deg.
+t = 5.0 s, images = 600, brut = 2, lacet = 120.0 deg.
+t = 6.0 s, images = 720, brut = 2, lacet = 144.0 deg.
+t = 7.0 s, images = 840, brut = 2, lacet = 168.0 deg.
+Vitesse calculee: 24.0 deg/s = 2 pixels/image * 0.1 deg/pixel * 120 images/s.
+Ces nombres representent le delta reutilise par le modele fautif; ils ne sont pas des relevés d'une souris physique.

@@ -1,0 +1,10 @@
+Ce que fait le monde :
+Avec l'ordre correct, la hauteur de regard reste a 30 deg pendant tout le balayage du lacet. Avec l'ordre inverse, elle varie de 30 deg a -30 deg.
+
+Autour de quel axe :
+Le lacet s'effectue autour de l'axe vertical du monde Y. Le tangage de la tete doit rester lie a son axe local; l'ordre inverse fait tourner cet axe avec le lacet de maniere incorrecte.
+
+L'ordre fautif :
+Le tangage est applique dans le mauvais repere avant le lacet. Les rotations ne commutent pas, donc la composante verticale du regard change pendant le balayage.
+
+Les trois vues sont capturees depuis Salle (R3D/OpenGL) et jointes au rendu: bon-90.png, mauvais-0.png et mauvais-90.png.

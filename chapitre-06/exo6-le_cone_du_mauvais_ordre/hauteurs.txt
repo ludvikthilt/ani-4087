@@ -1,0 +1,11 @@
+Sorties calculees par cone.cpp, tangage=30 deg.
+lac 0 deg: bon 30.00 deg, mauvais 30.00 deg
+lac 45 deg: bon 30.00 deg, mauvais 20.70 deg
+lac 90 deg: bon 30.00 deg, mauvais 0.00 deg
+lac 135 deg: bon 30.00 deg, mauvais -20.70 deg
+lac 180 deg: bon 30.00 deg, mauvais -30.00 deg
+
+Captures Salle demandees mais non produites dans cette execution sans fenetre R3D:
+bon-90.png — vue correcte a lacet 90 deg.
+mauvais-0.png — ordre inverse a lacet 0 deg.
+mauvais-90.png — ordre inverse a lacet 90 deg.

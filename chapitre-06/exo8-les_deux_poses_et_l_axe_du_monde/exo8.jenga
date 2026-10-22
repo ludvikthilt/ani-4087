@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo8-les_deux_poses_et_l_axe_du_monde"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["poses.cpp"])
+    user3d(modules=["NKMath"])

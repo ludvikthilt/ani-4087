@@ -1,0 +1,17 @@
+Comparaison analytique du programme autonome; ecarts maximum par ligne, stockage mat[col][row].
+
+test 1: FOV symetrique 70 deg / aspect 1280:720
+ligne 0: ecart max = 0.000000
+ligne 1: ecart max = 0.000000
+ligne 2: ecart max = 0.000000
+ligne 3: ecart max = 0.000000
+ecart maximal = 0.000000
+
+test 2: angles asymetriques Quest (-52,45,48,-50) deg
+ligne 0: ecart max = 0.000000
+ligne 1: ecart max = 0.000000
+ligne 2: ecart max = 0.000000
+ligne 3: ecart max = 0.000000
+ecart maximal = 0.000000
+
+Le test 2 compare deux evaluations de la meme formule analytique; aucun NkCamera3D instancie n'a ete compare.

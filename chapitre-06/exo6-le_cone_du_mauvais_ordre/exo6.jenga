@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo6-le_cone_du_mauvais_ordre"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["cone.cpp"])
+    user3d(modules=["NKMath"])

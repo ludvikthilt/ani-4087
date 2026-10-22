@@ -1,0 +1,7 @@
+Sensibilite du scenario: 0.1 deg/pixel.
+
+Vitesse calculee: 24 deg/s, a partir de 2 pixels/images * 0.1 deg/pixel * 120 images/s.
+
+Origine: la variante fautive re-applique le dernier delta brut connu a chaque image. Entre t=3 s (72 deg) et t=7 s (168 deg), la pente vaut (168-72)/(7-3)=24 deg/s.
+
+Cause de la derive: le delta d'evenement n'est pas consomme ni remis a zero par image. Cette valeur est un scenario mathematique; MouseRawDeltaX() n'a pas ete mesure avec une souris physique dans cette session.

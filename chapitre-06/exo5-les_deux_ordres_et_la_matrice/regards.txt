@@ -1,0 +1,6 @@
+Scenario: yaw=45 deg, pitch=30 deg, vecteur avant=(0,0,-1).
+qYaw*qPitch: (-0.6124, 0.5000, -0.6124)
+qPitch*qYaw: (-0.7071, 0.3536, -0.6124)
+RotationY*RotationX: (-0.6124, 0.5000, -0.6124)
+
+L'ordre Y puis X rejoint qYaw*qPitch pour cette convention. Le calcul est autonome; il ne constitue pas une sortie des types Nkentseu.

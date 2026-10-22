@@ -1,0 +1,3 @@
+Avec tangage fixe a 30 deg, l'ordre correct conserve une hauteur de 30 deg aux lacets 0, 45, 90, 135 et 180 deg. L'ordre inverse donne respectivement 30, 20.70, 0, -20.70 et -30 deg: la hauteur varie avec le lacet et le regard decrit un cone.
+
+Les hauteurs proviennent du calcul vectoriel autonome. Les trois captures jointes bon-90.png, mauvais-0.png et mauvais-90.png sont les vues reelles de la scene Salle avec le backend R3D/OpenGL.

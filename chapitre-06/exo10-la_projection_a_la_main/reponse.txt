@@ -1,0 +1,5 @@
+Le decentrage est encode dans mat[2][0] et mat[2][1]. Ils dependent des sommes des tangentes gauche/droite et haut/bas.
+
+En projection symetrique, les limites opposees ont des tangentes de signes contraires; les sommes sont nulles et les deux termes de decentrage disparaissent. Le test analytique a un ecart maximal de 0.000000.
+
+Le kit range les matrices en mat[col][row]. SetFovAsym attend les demi-angles signes en radians, puis calcule les tangentes. Les angles Quest du test sont -52, 45, 48 et -50 deg; les plans proche/lointain utilises sont 0.05 et 100. La comparaison Quest actuelle reproduit analytiquement la formule et n'appelle pas un NkCamera3D instancie.

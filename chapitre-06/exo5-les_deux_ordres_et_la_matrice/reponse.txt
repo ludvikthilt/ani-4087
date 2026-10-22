@@ -1,0 +1,5 @@
+Ordre rejoint: qYaw*qPitch et RotationY(yaw)*RotationX(pitch) donnent tous deux (-0.6124,0.5000,-0.6124).
+
+Ordre retenu pour la tete: lacet Y puis tangage X, soit yaw puis pitch. Le produit inverse qPitch*qYaw donne (-0.7071,0.3536,-0.6124), donc un regard distinct.
+
+Verification: les trois produits ont ete appliques au vecteur avant (0,0,-1) dans le calcul autonome. Les types Nkentseu n'ont pas ete instancies dans cette comparaison.

@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo5-les_deux_ordres_et_la_matrice"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["ordres.cpp"])
+    user3d(modules=["NKMath"])

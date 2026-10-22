@@ -1,0 +1,5 @@
+Pourquoi cette direction: le repere neutre regarde vers -Z et son axe vertical est +Y. Un lacet positif de 90 deg transforme l'avant en -X; un tangage positif donne une composante Y positive.
+
+L'epreuve discriminante: le cas yaw 90 attend (-1,0,0) et passe avec le signe courant. Inverser sin(yaw) dirige le vecteur vers +X et fait echouer l'assertion.
+
+Ce que la souris ne permet pas: le test automatise valide toujours les memes cas avec une tolerance numerique et un code de sortie reproductible, sans dependance a la precision d'un mouvement manuel.

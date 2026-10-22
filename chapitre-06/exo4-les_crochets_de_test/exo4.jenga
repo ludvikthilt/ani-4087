@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo4-les_crochets_de_test"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["tete.cpp"])
+    user3d(modules=["NKMath"])

@@ -1,0 +1,9 @@
+from Jenga import *
+
+with project("exo2-la_derive_provoquee"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["derive.cpp"])
+    user3d(modules=["NKMath"])

@@ -1,0 +1,11 @@
+from Jenga import *
+
+with project("exo7-le_cout_mesure"):
+    consoleapp()
+    language("C++")
+    cppdialect("C++17")
+    location(".")
+    files(["cout.cpp"])
+    user3d(modules=["NKMath", "NKTime"])
+    with filter("config:Release"):
+        optimize("Speed")

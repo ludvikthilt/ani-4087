@@ -1,0 +1,7 @@
+Chronometrage de 1 000 000 iterations par run. Temps en millisecondes.
+Debug matrices: 206.149, 184.151, 128.742; moyenne=173.014; mediane=184.151.
+Debug quaternions: 75.371, 89.198, 114.515; moyenne=93.028; mediane=89.198.
+Release matrices: 73.910, 56.118, 86.528; moyenne=72.185; mediane=73.910.
+Release quaternions: 62.450, 125.279, 73.217; moyenne=86.982; mediane=73.217.
+
+Les temps proviennent des executions locales du banc autonome en double precision. Ils ne mesurent pas directement les primitives Nkentseu ni le temps de rendu d'une image.

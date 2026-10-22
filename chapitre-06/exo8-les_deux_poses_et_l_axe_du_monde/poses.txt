@@ -1,0 +1,23 @@
+Unites: metres; ecart de l'oeil gauche en millimetres. H=(0.30,1.70,1.20), IPD=0.063 m.
+Convention: Right local au repos = -X; gauche locale = H + Right*IPD/2.
+
+neutre
+oeil local gauche: (0.2685, 1.7000, 1.2000)
+oeil local droit:  (0.3315, 1.7000, 1.2000)
+oeil monde gauche: (0.3315, 1.7000, 1.2000)
+oeil monde droit:  (0.2685, 1.7000, 1.2000)
+ecart gauche: 63.00 mm
+
+roll 30 deg
+oeil local gauche: (0.2727, 1.6843, 1.2000)
+oeil local droit:  (0.3273, 1.7158, 1.2000)
+oeil monde gauche: (0.3315, 1.7000, 1.2000)
+oeil monde droit:  (0.2685, 1.7000, 1.2000)
+ecart gauche: 60.85 mm
+
+yaw 90 deg
+oeil local gauche: (0.3000, 1.7000, 1.2315)
+oeil local droit:  (0.3000, 1.7000, 1.1685)
+oeil monde gauche: (0.3315, 1.7000, 1.2000)
+oeil monde droit:  (0.2685, 1.7000, 1.2000)
+ecart gauche: 44.55 mm
