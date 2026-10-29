@@ -1,0 +1,3 @@
+Mes deux gestes : Le geste lent est de 45 deg en 800 ms; le demi-tour est de 180 deg en 300 ms. Ils ont ete choisis pour confronter une acceleration lente a une inversion de vitesse rapide sur un meme mouvement de lacet sinusoidal.
+OU elle aide le moins : Le demi-tour brusque est le cas ou la prediction aide le moins: rapport 7.74, avec 1.155 deg contre 8.935 deg sans prediction. Le geste rapide de reference fait 90 deg en 400 ms, avec un rapport 10.12.
+Pourquoi la : Le modele suppose une vitesse angulaire constante entre deux poses. Cette hypothese tient assez bien au milieu du mouvement lent, mais elle surestime ou sous-estime la vitesse pendant les accelerations et les freinages; elle est surtout mauvaise autour du demi-tour et de ses changements de vitesse.

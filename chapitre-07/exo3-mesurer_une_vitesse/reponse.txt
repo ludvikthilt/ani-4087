@@ -1,0 +1,3 @@
+La serie programmee : vingt vitesses ont ete relevees et leur composante principale est stable autour de 30.000 deg/s, avec les écarts d'horodatage variables mais la même orientation.
+La serie a la souris : les vingt vitesses mesurent en moyenne 20.762 deg/s, avec un écart-type de 12.622 deg/s ; elle est nettement plus irrégulière que la série programmée à 30 deg/s.
+D'ou vient le bruit : les mouvements accumulés arrivent une fois par image seulement apres leur lecture brute ou normale ; le temps dt varie aussi avec le scheduler et le rendu, ce qui amplifie les petites variations de l'accumulateur.

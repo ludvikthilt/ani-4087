@@ -1,0 +1,3 @@
+La frequence de mon ecran est de 59 Hz, telle que relevee dans les parametres graphiques Windows.
+Avec attente de l'ecran, je tiens en moyenne 38.289 images par seconde (26.115 ms par image) sur 1040 images ; sans attente, la mesure realisee atteint 70.902 images par seconde (14.104 ms par image) sur 282 images.
+Le maximum mesure montre 304.728 ms avec attente et 31.020 ms sans attente : ces pics ponctuels ne sont pas representatifs de la cadence, car ils sont tres eloignes des medianes de 19.372 ms et 13.516 ms.

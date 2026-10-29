@@ -1,0 +1,6 @@
+image 788 : lacet = 269.374 deg, vitesse = (0.000, 19.999, 0.000) deg/s, delta.w = 0.999996
+image 789 : lacet = 269.702 deg, vitesse = (0.000, 20.001, 0.000) deg/s, delta.w = 0.999996
+image 790 : lacet = 270.033 deg, vitesse = (0.000, -19.999, -0.000) deg/s, delta.w = -0.999996
+image 791 : lacet = 270.353 deg, vitesse = (0.000, 20.001, 0.000) deg/s, delta.w = 0.999996
+image 792 : lacet = 270.686 deg, vitesse = (0.000, 20.000, 0.000) deg/s, delta.w = 0.999996
+image 793 : lacet = 271.022 deg, vitesse = (0.000, 20.000, 0.000) deg/s, delta.w = 0.999996

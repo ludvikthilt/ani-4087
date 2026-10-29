@@ -1,0 +1,7 @@
+Le premier tour sans traitement complementaire est programme a 20 deg/s. Autour de 270 deg, le changement de representation du quaternion fait passer delta.w de +1 vers -1 ; la vitesse angulaire peut alors etre calculee dans le mauvais sens alors que la pose continue son mouvement reel.
+
+Dans le relevé, l'image 790 est l'image fautive : le lacet vaut 270.033 deg et la vitesse affichee devient (0.000, -19.999, -0.000) deg/s, tandis que delta.w vaut -0.999996. Les images voisines montrent encore environ 20 deg/s : 269.702 deg/s a l'image 789 et 20.001 deg/s a l'image 791.
+
+L'ajout temporaire de la condition delta.w < 0.f, suivie de la negation des quatre composantes du quaternion, ramene le signe de delta.w a positif sans changer la rotation representee. Dans la mesure de verification, les images 788 a 793 restent a environ 20 deg/s autour de 275 deg, y compris l'image correspondant au passage critique.
+
+Le quaternions +q et -q decrivent la meme rotation. Il faut donc conserver une convention continue, par exemple en choisissant toujours la representation dont la composante delta.w est positive. Cette operation de chemin court empeche un faux changement de sens pres de 180 deg tout en conservant la vitesse normale du tour.
