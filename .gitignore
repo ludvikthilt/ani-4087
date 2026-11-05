@@ -1,0 +1,29 @@
+# Artefacts de build et caches
+Build/
+.jenga/
+.nkcode/
+__pycache__/
+*.py[cod]
+*.exe
+*.o
+*.obj
+*.lib
+*.a
+*.dll
+*.pdb
+*.log
+
+# Config IDE locale
+.vscode/
+pyrightconfig.json
+
+# Kits du moteur et dossier de travail : les rendus sont dans chapitre-XX/
+chapitre-06/R3D/
+Chapitre_03/
+
+# Documents du cours
+ressources/
+/*.pdf
+
+# Brouillon a la racine
+/main.cpp

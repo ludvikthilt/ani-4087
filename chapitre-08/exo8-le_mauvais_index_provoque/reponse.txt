@@ -1,0 +1,17 @@
+Images paires et impaires : La camera avance de 10 mm par trame, mais la sortie montre 10, 10, 30, 30, 50, 50, 70, 70. Les trames impaires, en mode D, lisent l'index apres ReleaseImage et montrent l'image qu'elles viennent de peindre : la trame 3 montre la position 30. Les trames paires, en mode P, lisent l'index avant ReleaseImage et montrent l'image de la trame d'avant : la trame 4 montre encore la trame 3, soit 30. Les sauts alternent donc entre 20 et 0 au lieu de valoir 10 : SAUT MIN 0, SAUT MAX 20, TREMBLE OUI.
+
+Avec une seule image : Relance avec n = 1 sur la meme suite DPDPDPDP, la sortie est :
+1 10 -
+2 20 10
+3 30 10
+4 40 10
+5 50 10
+6 60 10
+7 70 10
+8 80 10
+SAUT MIN 10
+SAUT MAX 10
+TREMBLE NON
+L'emplacement 0 est le seul possible : (0 + 1 - 1) % 1 vaut 0 quel que soit le moment de la lecture. Tous les modes donnent le meme emplacement, la faute existe dans le code mais ne se voit pas. C'est pour cela qu'une chaine d'une seule image la cache.
+
+La bonne lecture : Il faut lire l'index de la derniere image relachee apres ReleaseImage, c'est le mode D. Avec n = 2 et DDDDDDDD, chaque trame montre ce qu'elle vient de peindre, tous les sauts valent 10 et TREMBLE vaut NON. Avec PPPPPPPP, le decalage d'une trame est constant : les sauts valent aussi 10 et rien ne tremble, mais la trame 1 est noire et chaque image a une trame de retard. C'est l'alternance des deux lectures qui fait trembler.

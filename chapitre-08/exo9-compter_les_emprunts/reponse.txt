@@ -1,0 +1,13 @@
+La relation : Si aucune image n'est encore empruntee, REUSSIES = LIBERATIONS. Si une image est encore empruntee, REUSSIES = LIBERATIONS + 1. ECART vaut donc 0 ou 1, jamais plus, car un emprunt est refuse tant que le precedent n'est pas rendu. Sur l'entree donnee, REUSSIES 5 et LIBERATIONS 4 donnent ECART 1 : l'image empruntee a la trame 5 n'a jamais ete rendue, et les trames 6 a 10 sont refusees, en plus du second emprunt de la trame 3, soit REFUSEES 6.
+
+Ma boucle : J'ai ajoute les trois compteurs a la boucle de ma salle, en Debug, et je l'ai fait tourner 60.004 s. Le kit ne fournit pas de chaine d'echange : les compteurs sont portes par une chaine de trois images ecrite selon les regles du chapitre. Resultat : 3432 trames, REUSSIES 3432, REFUSEES 0, LIBERATIONS 3432, ECART 0, aucune image encore empruntee a la fin. La relation est verifiee, et le chemin qui fuit n'a pas ete emprunte pendant cette minute.
+
+Le chemin qui fuit : Dans ma boucle, l'emprunt a lieu avant BeginFrame et la liberation a l'interieur du bloc :
+    const bool empruntee = chaine.AcquireImage(index);
+    if (empruntee && rEcran->BeginFrame()) {
+        ...
+        chaine.ReleaseImage();
+        rEcran->Present();
+        rEcran->EndFrame();
+    }
+Si BeginFrame rend false, on sort du bloc sans ReleaseImage : l'image reste empruntee et tous les emprunts suivants sont refuses. La correction est de rendre l'image aussi dans ce cas. Dans emprunts.cpp, c'est la branche "sortie" qui reproduit cette fuite.
