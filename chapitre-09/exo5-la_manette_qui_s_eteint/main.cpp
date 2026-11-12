@@ -43,8 +43,10 @@ int main() {
         }
       } else if (heldWithoutActive) {
         heldWithoutActive = false;
-        fallenWithoutActive = true;
-        ++fallsWithoutActive;
+        if (!active) {
+          fallenWithoutActive = true;
+          ++fallsWithoutActive;
+        }
       }
     }
 
