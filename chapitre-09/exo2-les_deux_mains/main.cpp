@@ -57,8 +57,6 @@ int main() {
               << actions.back().command << '\n';
   }
 
-  std::cout << "DROITE " << rightCount << '\n';
-  std::cout << "GAUCHE " << leftCount << '\n';
   int headFrames = 0;
   std::vector<std::unordered_set<std::string>> frames;
   frames.reserve(static_cast<std::size_t>(frameCount));
@@ -80,7 +78,6 @@ int main() {
     frames.push_back(std::move(held));
   }
 
-  std::cout << "TETE " << headFrames << '\n';
   for (std::size_t frame = 0; frame < frames.size(); ++frame) {
     const auto& held = frames[frame];
     int arrowX = (held.count("F_DROITE") != 0) -
@@ -105,5 +102,8 @@ int main() {
     }
     std::cout << '\n';
   }
+  std::cout << "DROITE " << rightCount << '\n';
+  std::cout << "GAUCHE " << leftCount << '\n';
+  std::cout << "TETE " << headFrames << '\n';
   return 0;
 }
