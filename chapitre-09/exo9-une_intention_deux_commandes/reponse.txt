@@ -1,0 +1,5 @@
+Ce qui change : Pour passer du simulateur à un vrai casque, seule la table qui associe chaque usage à une commande physique doit changer. Le traitement des actions et de leurs appuis reste le même.
+
+Aucun nom de bouton : En dehors de la table, le programme consulte seulement la commande liée à un usage et son état. Le code de traitement ne dépend donc pas des noms des boutons.
+
+L'action inactive : Si un usage n'existe pas dans la table, l'action est signalée INACTIVE et ne produit aucun appui. Ce signal rend visible une intention qui n'est reliée à aucune commande.

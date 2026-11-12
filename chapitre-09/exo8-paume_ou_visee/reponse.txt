@@ -1,0 +1,5 @@
+La distance : La paume droite est en (180, -300, -250) et la visée droite en (180, -250, -400) dans le repère de la tête. Leur écart vaut sqrt(0² + 50² + 150²) = 158,1 mm, arrondi à 158 mm. Les translations et les rotations communes de la tête ne changent pas cette distance.
+
+L'angle : Dans ce simulateur, les deux directions avant sont identiques : les poses de paume et de visée gardent l'orientation de la tête. L'angle vaut donc 0°. Un vrai casque peut avoir des orientations de paume et de visée différentes, selon son suivi et son modèle.
+
+Pour pointer : La visée droite est faite pour pointer. Dans la première pose, l'objet 2 est à 80 mm de la visée et peut être atteint par elle, alors qu'il est à plus de 150 mm de la paume. La visée représente donc mieux la direction de pointage.

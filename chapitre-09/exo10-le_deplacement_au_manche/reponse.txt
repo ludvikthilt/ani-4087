@@ -1,0 +1,5 @@
+Décalage ou tête : Le déplacement s'accumule comme un décalage du joueur dans la salle, orienté par le lacet de la tête. La pose de la tête reste celle fournie par le casque.
+
+Ce que la tête casserait : Écrire une pose artificielle dans la tête se battrait contre le suivi réel et fausserait la prédiction du moteur. L'image pourrait dériver ou sauter au lieu de suivre le casque.
+
+Les diagonales : Avec un pas de longueur v sur chaque axe, une diagonale a une longueur de sqrt(v² + v²) = v × sqrt(2), soit environ 1,414 fois la vitesse (41,4 % de plus). Pour l'éviter, il faut normaliser le vecteur du manche à une longueur maximale de 1 avant de le multiplier par v.
