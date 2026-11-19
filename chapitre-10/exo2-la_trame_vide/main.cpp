@@ -24,7 +24,7 @@ int main() {
 
     for (int frame = 1; frame <= imageCount; ++frame) {
         if (renderFlags[static_cast<std::size_t>(frame - 1)] == '1') {
-            std::cout << frame << " OUI " << frame - 1 << ' ' << nextImage
+            std::cout << frame << " OUI 1 " << frame - 1 << ' ' << nextImage
                       << '\n';
             nextImage = (nextImage + 1) % swapchainSize;
             ++rendered;

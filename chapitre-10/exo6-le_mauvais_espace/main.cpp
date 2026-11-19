@@ -33,10 +33,9 @@ Pose compose(const Pose &anchor, const Pose &pose) {
 
 int main() {
     Pose anchor{};
-    Pose eye{};
     int poseCount = 0;
     if (!(std::cin >> anchor.x >> anchor.y >> anchor.z >> anchor.yaw >>
-          eye.x >> eye.y >> eye.z >> poseCount)) {
+          poseCount)) {
         return 0;
     }
 
