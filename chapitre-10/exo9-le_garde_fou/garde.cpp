@@ -78,30 +78,28 @@ Result run(const std::string &paths, bool guarded) {
     int images = 0;
 
     for (char path : paths) {
-        if (!session.wait()) {
-            session.begin();
-            if (!guarded) {
-                session.end();
-            }
-            continue;
-        }
-        if (!session.begin()) {
-            continue;
+        const bool waitAccepted = session.wait();
+        const bool beginAccepted = session.begin();
+        if (!waitAccepted && (path == 'N' || path == 'C')) {
+            path = 'V';
         }
 
         if (guarded) {
-            FrameGuard guard(session);
-            guard.activate();
-            if (path == 'N') {
-                ++images;
-            } else if (path == 'C' || path == 'R') {
-                if (path == 'R') {
+            if (beginAccepted) {
+                FrameGuard guard(session);
+                guard.activate();
+                if (path == 'N') {
+                    ++images;
+                } else if (path == 'C') {
+                    continue;
+                } else if (path == 'R') {
                     break;
                 }
-                continue;
+            } else if (path == 'R') {
+                break;
             }
         } else {
-            if (path == 'N') {
+            if (path == 'N' && beginAccepted) {
                 ++images;
             } else if (path == 'C') {
                 continue;
