@@ -1,0 +1,5 @@
+Le chemin fautif : La vue échoue à la troisième image et le continue saute End. La trame reste ouverte; à l'image suivante, Wait et Begin sont refusés. Le return saute aussi End et peut laisser la dernière trame ouverte.
+
+Pourquoi le destructeur : Le destructeur du garde s'exécute à la sortie de sa portée, y compris lors d'un continue ou d'un return. Il termine donc la trame dès qu'elle a été commencée, sans dupliquer l'appel End sur chaque chemin.
+
+Le return : Sans garde, le return à la sixième image laisse la trame ouverte. Avec garde, le destructeur ferme cette trame avant que la fonction ne se termine.

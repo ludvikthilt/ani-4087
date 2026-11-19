@@ -1,0 +1,5 @@
+Négligeable : Les moyennes mesurées sont de 5 mm et 770 millièmes de degré (0,77°). Le maximum atteint toutefois 13 mm et 2200 millièmes de degré (2,2°) : le décalage n'est donc pas négligeable pour toutes les images.
+
+Seuil : Avec d = 11 ms, l'écart de lacet en millièmes de degré vaut vitesse × 11. Pour dépasser 1 degré (1000 millièmes), il faut vitesse × 11 > 1000, donc vitesse > 90,91 degrés par seconde (91 degrés par seconde si la vitesse est entière).
+
+Ce que corrige le compositeur : Il corrige la différence entre la pose utilisée pour le rendu et celle soumise avec la couche. Il faut donc soumettre la pose du rendu, pas une pose relue plus tard.

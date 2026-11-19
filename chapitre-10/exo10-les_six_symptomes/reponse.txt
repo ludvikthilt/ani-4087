@@ -1,0 +1,5 @@
+Ce que le simulateur signale : Il signale les fins de trame qui ne sont pas toujours soumises (JAMAIS ou SI_RENDU), ainsi que les chaînes manquantes pour les yeux. Une chaîne absente à droite produit OEIL_NOIR_D.
+
+Ce qu'il tait : Il ne reprojette pas l'image et ne peut donc pas détecter une pose relue trop tard, un instant courant au lieu de l'instant prédit, ni un espace incorrect. Ces erreurs peuvent déformer l'image dans le casque sans changer ce que le simulateur affiche.
+
+Plus sévère : Le simulateur avertit pour une chaîne manquante, même si la session continue; par exemple l'application 4 affiche OEIL_NOIR_D et SIMULATEUR DIT. Le casque réel montre le symptôme et ne fournit pas nécessairement cet avertissement.
