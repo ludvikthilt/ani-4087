@@ -47,7 +47,7 @@ int main() {
                       anchor.z + offset.z};
         }
 
-        std::cout << "PANNEAU " << index << " ESPACE "
+        std::cout << "PANNEAU " << index << ' '
                   << (isLocal ? "LOCAL" : "STAGE") << '\n';
 
         const Point corners[] = {
