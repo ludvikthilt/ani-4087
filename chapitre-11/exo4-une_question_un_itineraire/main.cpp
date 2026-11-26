@@ -36,37 +36,30 @@ int main() {
 
     const std::string key = "\"library_path\"";
     std::size_t keyPos = std::string::npos;
-    std::size_t searchPos = 0;
-    while (searchPos < manifest.size()) {
-      const std::size_t candidate = manifest.find(key, searchPos);
-      if (candidate == std::string::npos) {
-        break;
-      }
-
-      bool escaped = false;
-      std::size_t slashPos = candidate;
-      while (slashPos > 0 && manifest[slashPos - 1] == '\\') {
-        escaped = !escaped;
-        --slashPos;
-      }
-
-      bool looksLikeKey = false;
-      if (!escaped) {
-        std::size_t before = candidate;
-        while (before > 0 &&
-               (manifest[before - 1] == ' ' || manifest[before - 1] == '\t' ||
-                manifest[before - 1] == '\n' || manifest[before - 1] == '\r')) {
-          --before;
+    bool inString = false;
+    for (std::size_t pos = 0; pos + key.size() <= manifest.size(); ++pos) {
+      if (!inString && manifest.compare(pos, key.size(), key) == 0) {
+        int slashCount = 0;
+        for (std::size_t slash = pos; slash > 0 && manifest[slash - 1] == '\\';
+             --slash) {
+          ++slashCount;
         }
-        looksLikeKey = before == 0 || manifest[before - 1] == '{' ||
-                       manifest[before - 1] == ',';
+        if ((slashCount % 2) == 0) {
+          keyPos = pos;
+          break;
+        }
       }
-
-      if (looksLikeKey) {
-        keyPos = candidate;
-        break;
+      if (manifest[pos] == '"') {
+        int slashCount = 0;
+        for (std::size_t slash = pos; slash > 0 && manifest[slash - 1] == '\\';
+             --slash) {
+          ++slashCount;
+        }
+        if ((slashCount % 2) == 0) {
+          inString = !inString;
+        }
+        continue;
       }
-      searchPos = candidate + key.size();
     }
 
     if (keyPos == std::string::npos) {
