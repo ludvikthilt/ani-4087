@@ -63,13 +63,14 @@ int main() {
     half = next();
     depth = next();
     list = next();
-    loader = next();
-    if (loader == "-") {
-      loader.clear();
-    }
     std::string latencyText = next();
     std::size_t latencyPos = 0;
     latency = readInteger(latencyText, latencyPos);
+  }
+
+  std::getline(std::cin, loader);
+  if (loader.empty() || loader == "-") {
+    loader.clear();
   }
 
   std::string poseMode;
