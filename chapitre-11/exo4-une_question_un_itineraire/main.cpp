@@ -35,7 +35,28 @@ int main() {
     }
 
     const std::string key = "\"library_path\"";
-    const std::size_t keyPos = manifest.find(key);
+    std::size_t keyPos = std::string::npos;
+    std::size_t searchPos = 0;
+    while (searchPos < manifest.size()) {
+      const std::size_t candidate = manifest.find(key, searchPos);
+      if (candidate == std::string::npos) {
+        break;
+      }
+
+      bool escaped = false;
+      std::size_t slashPos = candidate;
+      while (slashPos > 0 && manifest[slashPos - 1] == '\\') {
+        escaped = !escaped;
+        --slashPos;
+      }
+
+      if (!escaped) {
+        keyPos = candidate;
+        break;
+      }
+      searchPos = candidate + key.size();
+    }
+
     if (keyPos == std::string::npos) {
       std::cout << i << " ECHEC CLE\n";
       continue;
