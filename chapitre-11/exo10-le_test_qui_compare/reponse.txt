@@ -1,0 +1,3 @@
+Ce qui varie : À chaque image, l'instant prédit vient de l'horloge du système, tandis que le lacet tourne et que la position x avance; les centres gauche et droit sont donc recalculés autour de la droite du casque.
+Le remède : L'horloge doit être scriptée avec t multiplié par la période au lieu d'utiliser l'horloge réelle, et les yeux doivent garder un écart IPD symétrique dans le plan selon le lacet courant.
+La preuve : Les quatre images produites sont identiques d'une exécution à l'autre avec les instants 11111111, 22222222, 33333333 et 44444444; la recomposition devient reproductible.

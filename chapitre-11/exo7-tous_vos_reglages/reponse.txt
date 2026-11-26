@@ -1,0 +1,3 @@
+Le réglage fantôme : depthZeroToOne semble régler la transformation profondeur-zéro-vers-un dans un menu, mais personne ne lit sa valeur; elle reste donc sans effet sur le rendu.
+La lecture cachée : Si un menu pose openXrLoaderPath, le backend lit directement NK_XR_OPENXR_LOADER; la valeur du champ peut donc être ignorée et changer le menu sans changer le loader réellement chargé.
+Le menu : Une personne peut changer les cinq réglages de classe MENU (renderScale, halfRate, submitDepthLayer, listExtensions et displayHz). Il faudrait faire lire par le backend les réglages marqués CACHE, déclarer ou retirer les réglages FANTOME ou CONSTANTE, et relier chaque menu à la variable réellement utilisée.
