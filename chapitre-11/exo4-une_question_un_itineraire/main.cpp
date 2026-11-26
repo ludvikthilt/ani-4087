@@ -50,7 +50,19 @@ int main() {
         --slashPos;
       }
 
+      bool looksLikeKey = false;
       if (!escaped) {
+        std::size_t before = candidate;
+        while (before > 0 &&
+               (manifest[before - 1] == ' ' || manifest[before - 1] == '\t' ||
+                manifest[before - 1] == '\n' || manifest[before - 1] == '\r')) {
+          --before;
+        }
+        looksLikeKey = before == 0 || manifest[before - 1] == '{' ||
+                       manifest[before - 1] == ',';
+      }
+
+      if (looksLikeKey) {
         keyPos = candidate;
         break;
       }
@@ -61,8 +73,12 @@ int main() {
       std::cout << i << " ECHEC CLE\n";
       continue;
     }
-    const std::size_t colonPos = manifest.find(':', keyPos + key.size());
-    if (colonPos == std::string::npos) {
+    std::size_t colonPos = keyPos + key.size();
+    while (colonPos < manifest.size() &&
+           (manifest[colonPos] == ' ' || manifest[colonPos] == '\t')) {
+      ++colonPos;
+    }
+    if (colonPos >= manifest.size() || manifest[colonPos] != ':') {
       std::cout << i << " ECHEC DEUX_POINTS\n";
       continue;
     }
