@@ -22,6 +22,9 @@ int main() {
 
   int count = 0;
   std::cin >> count;
+  if (count < 0) {
+    count = 0;
+  }
   std::vector<long long> clockA(static_cast<std::size_t>(count));
   std::vector<long long> clockB(static_cast<std::size_t>(count));
   for (long long &value : clockA) {

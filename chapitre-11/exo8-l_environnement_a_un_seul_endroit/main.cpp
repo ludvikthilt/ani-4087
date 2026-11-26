@@ -57,12 +57,19 @@ int main() {
       return initial.substr(start, pos - start);
     };
     backend = next();
-    hz = std::stoll(next());
+    std::string hzText = next();
+    std::size_t hzPos = 0;
+    hz = readInteger(hzText, hzPos);
     half = next();
     depth = next();
     list = next();
     loader = next();
-    latency = std::stoll(next());
+    if (loader == "-") {
+      loader.clear();
+    }
+    std::string latencyText = next();
+    std::size_t latencyPos = 0;
+    latency = readInteger(latencyText, latencyPos);
   }
 
   std::string poseMode;
@@ -160,26 +167,48 @@ int main() {
       } else {
         std::size_t pos = 0;
         int count = 0;
+        bool poseValid = true;
         while (count < 5) {
-          while (pos < value.size() &&
-                 (value[pos] == ',' || value[pos] == ' ')) {
-            ++pos;
+          if (count > 0) {
+            while (pos < value.size() &&
+                   (value[pos] == ',' || value[pos] == ' ' ||
+                    value[pos] == '\t')) {
+              ++pos;
+            }
           }
           if (pos >= value.size()) {
             break;
           }
-          const std::size_t before = pos;
-          poseValues[count] = readInteger(value, pos);
-          bool hadDigit = pos > before;
-          if (!hadDigit) {
+          long long sign = 1;
+          if (pos < value.size() && (value[pos] == '+' || value[pos] == '-')) {
+            if (value[pos] == '-') {
+              sign = -1;
+            }
+            ++pos;
+          }
+          bool hasDigit = false;
+          long long number = 0;
+          while (pos < value.size() && value[pos] >= '0' && value[pos] <= '9') {
+            hasDigit = true;
+            number = number * 10 + (value[pos] - '0');
+            ++pos;
+          }
+          if (!hasDigit) {
+            poseValid = false;
             break;
           }
+          poseValues[count] = sign * number;
           ++count;
           if (pos >= value.size()) {
             break;
           }
+          if (pos < value.size() && value[pos] != ',' && value[pos] != ' ' &&
+              value[pos] != '\t') {
+            poseValid = false;
+            break;
+          }
         }
-        if (count == 5) {
+        if (poseValid && count == 5) {
           pose = "FIXE";
           ++applied;
         } else {
